@@ -1,0 +1,66 @@
+{% extends "incluide/menu.html" %} {% load static %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+<div id="contenedorFormularioRegistro" class="row justify-content-center">
+    <h2 class="col-12">Formulario Registro</h2>
+
+    <form id="formularioRegistro" action="" method="POST" class="col-xl-5 col-md-7 col-xs-12" enctype="multipart/form-data">
+        
+        <!--INPUT NOMBRE -->
+        <div class="form-group">
+            <label for="registroNombre" class="d-none d-sm-block">Nombre</label>
+            <div class="input-group registroNombre">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-user"></i></div>
+                </div>
+               
+            </div>
+        </div>
+        <!--INPUT EMAIL -->
+        <div class="form-group">
+            <label for="registroEmail" class="d-none d-sm-block">Email</label>
+            <div class="input-group registroEmail">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-envelope"></i></div>
+                </div>
+               
+            </div>
+        </div>
+        <!--INPUT PASSWORD -->
+        <div class="form-group">
+            <label for="registroPassword" class="d-none d-sm-block">Contraseña</label>
+            <div class="input-group registroPassword">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-key"></i></i></div>
+                </div>
+               
+            </div>
+        </div>
+        <!--INPUT PASSWORD VERIFICACION -->
+        <div class="form-group">
+            <label for="registroPasswordValidar" class="d-none d-sm-block">Valide Contraseña</label>
+            <div class="input-group registroPasswordValidar">
+                <div class="input-group-prepend">
+                    <div class="input-group-text"><i class="fas fa-key"></i></i></div>
+                </div>
+                <input type="password" class="form-control" id="registroPasswordValidar" placeholder="Ingrese nuevamente su contraseña" required/>
+            </div>
+        </div>
+        
+        <!--INPUT TERMINOS Y CONDICIONES -->
+        <div class="custom-control custom-checkbox terminos">
+            <input type="checkbox" class="custom-control-input" id="registroTerminos" required/>
+            <label class="custom-control-label" for="registroTerminos">Acepto términos y condiciones</label>
+        </div>
+        <div class="row justify-content-between">
+            <button class="btn btn-primary col-12 col-md-5 registroSubmit" type="submit">Registrarme</button>
+            <button class="btn btn-danger col-12 col-md-5 registroReset" type="reset">Limpiar</button>
+        </div>
+    </form>
+</div>
+
+    
+{% endblock  %}
+
